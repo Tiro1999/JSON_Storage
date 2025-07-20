@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Storage Item List",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category":             { "type": "string" },
+          "subcategory":          { "type": "string" },
+          "brand":                { "type": "string" },
+          "model_number":         { "type": "string" },
+          "quantity":             { "type": "integer" },
+          "price_per_piece":      { "type": "number" },
+          "storage_description":  { "type": "string" },
+          "notes":                { "type": "string" }
+        },
+        "required": [
+          "category",
+          "subcategory",
+          "brand",
+          "model_number",
+          "quantity",
+          "price_per_piece",
+          "storage_description",
+          "notes"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["items"],
+  "additionalProperties": false
+}
